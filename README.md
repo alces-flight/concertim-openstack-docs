@@ -7,6 +7,7 @@ The purpose of this repo is to manage the docs for all services related to Conce
 For docs pertaining to Concertim Environment:
 
 - [Concertim Installation/Setup](concertim-install.md)
+- [Concertim Ansible Deployment](concertim-ansible.md)
 - [Concertim Metric Reporting Daemon](concertim-metric-daemon.md)
    - [Usage/Examples](concertim-metric-examples.md)
 - [Concertim Visualization App](concertim-ui.md)
