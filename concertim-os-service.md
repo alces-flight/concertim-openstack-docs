@@ -58,6 +58,8 @@ Note that the Concertim Openstack Service logs will be written to the `/var/logs
 
 The service will run indefinitely, sending metric data to the Concertim API repeatedly every 30 second (can be changed).
 
+For the concertim-openstack-service to recognize the cluster, instance names must follow the format `<instance_name>.<cluster_name>.<anything_else>`. An example would be `storage001.examplecluster.234hf` for the `storage001` instance in the cluster named `examplecluster` with a UID of `234hf`. Note, the UID is NOT needed, but extra metadata can be added to the end of the name.
+
 ## Changing Configuration
 
 To change the configuration for the Concertim Openstack Service, modify the `/etc/concertim-openstack-service/config.json` file. 
