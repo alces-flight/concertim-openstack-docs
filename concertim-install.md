@@ -67,9 +67,9 @@ It needs to be able to make HTTP/s requests to the OpenStack installation that i
 
 ## User accounts and projects
 
-Concertim UI `0.1.2` ships with three accounts by default, `admin`, `operator_one` and `operator_two`. In each case, the password is the same as the username. Additional non-admin accounts can be created from the Concertim UI.
+Concertim UI `0.1.3` ships with a single admin account by default, namely `admin`, the password is the same as the username.
 
-Each OpenStack project that should be managed by Concertim should have a different Concertim account created for it. The account should be configured with the OpenStack project ID via the "Account Details" page on the Concertim UI. Settting a project ID is not available for the admin user.
+Each OpenStack project to be managed by Concertim should have a different non-admin Concertim account created and configured for it.  Non-admin accounts can be created from the Concertim UI.  Once the account has been created, its OpenStack project ID can be set via the "Account Details" page in the Concertim UI. Setting a project ID is not available for the admin user.
 
 When an account is configured with a project ID, racks and devices will be automatically populated by Concertim OpenStack service with the instances it finds for that project ID.
 
