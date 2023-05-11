@@ -18,9 +18,13 @@ The most recent version of the Concertim UI is `0.1.2`. To install this version 
 
 The Docker images can be built on and ran on any machine suitable for running Docker containers. This could be the same machine that runs an OpenStack installation, but it doesn't have to be.
 
-Any users of the Concertim UI will need to be able to access ports `80` and `443` of the Docker containers `concertim_ui_visualisation_1`.
+The Docker container `concertim_ui_proxy_1` binds its HTTP and HTTPS ports to the Docker host's `9080` and `9443` ports respectively on interface `127.0.0.1`.  Details on configuring the defaults can be found at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.2/docker/README.md#configuration.
 
-The Concertim OpenStack service will need to be able to access port `443` of the `concertim_ui_visualisation_1` container.
+The HTTP port redirects all traffic to the HTTPS port, as such access to it is optional.
+
+Any users of the Concertim UI will need to be able to access the HTTPS port of the Docker container `concertim_ui_proxy_1` and optionally the HTTP port.  By default bound to port `9443` on the docker host.
+
+The Concertim OpenStack service will need to be able to access the HTTPS port of the `concertim_ui_proxy_1` container. By default bound to port `9443` on the docker host.
 
 
 ## VM installation
@@ -29,7 +33,7 @@ Alternatively, the Concertim UI can be built on a dedicated VM. Instructions for
 
 The VM could be an OpenStack instance running on the OpenStack service that is to be managed, but it doesn't have to be.
 
-Any users of the Concertim UI will need to be able to access ports `80` and `443` of the VM.
+Any users of the Concertim UI will need to be able to access port `443` of the VM, and optionally port `80`.
 
 The Concertim OpenStack service will need to be able to access port `443` of the VM.
 
