@@ -14,7 +14,7 @@ In either case, the build will download some assets from S3, so you will need to
 
 ## Docker installation
 
-The most recent version of the Concertim UI is `0.1.2`. To install this version as a multiple Docker containers follow the instructions at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.2/docker/README.md.
+The most recent version of the Concertim UI is `0.1.3`. To install this version as multiple Docker containers follow the instructions at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.3/docker/README.md.
 
 The Docker images can be built on and ran on any machine suitable for running Docker containers. This could be the same machine that runs an OpenStack installation, but it doesn't have to be.
 
@@ -29,7 +29,7 @@ The Concertim OpenStack service will need to be able to access the HTTPS port of
 
 ## VM installation
 
-Alternatively, the Concertim UI can be built on a dedicated VM. Instructions for this can be found at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.2/ansible/README.md.
+Alternatively, the Concertim UI can be built on a dedicated VM. Instructions for this can be found at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.3/ansible/README.md.
 
 The VM could be an OpenStack instance running on the OpenStack service that is to be managed, but it doesn't have to be.
 
@@ -40,11 +40,11 @@ The Concertim OpenStack service will need to be able to access port `443` of the
 
 ### Post-installation configuration
 
-Before the Concertim UI is ready to be used, a number of machine templates need to be created. It is expected that these templates will vary from site to site and will match the OpenStack flavours available at that site. An example script of how to create these templates is available at https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.2/docs/api/examples/create-template.sh
+Before the Concertim UI is ready to be used, a number of machine templates need to be created. It is expected that these templates will vary from site to site and will match the OpenStack flavours available at that site. An example script of how to create these templates is available at https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.3/docs/api/examples/create-template.sh
 
-To quickly populate multiple example templates the script https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.2/docs/api/examples/populate-templates.sh can be used.
+To quickly populate multiple example templates the script https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.3/docs/api/examples/populate-templates.sh can be used.
 
-Details on how to run those example scripts can be found at https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.2/docs/api/examples/README.md A brief example session is reproduced below.
+Details on how to run those example scripts can be found at https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.3/docs/api/examples/README.md A brief example session is reproduced below.
 
 Note that if running either of those scripts you will want to check out the entire example directory.
 
