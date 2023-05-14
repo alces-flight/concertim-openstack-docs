@@ -2,6 +2,12 @@
 
 The purpose of this repo is to manage the docs for all services related to Concertim and Openstack Cluster Portal.
 
+The docs are stored here for quick reference, but they are also present in their respective repositories:
+- [Concertim Visualization App](https://github.com/alces-flight/concertim-ct-visualisation-app)
+- [Concertim Metric Reporting and Processing Daemon](https://github.com/alces-flight/concertim-metric-reporting-daemon)
+- [Concertim Ansible](https://github.com/alces-flight/concertim-ansible-playbook)
+- [Concertim-Openstack Service Daemon](https://github.com/alces-flight/concertim-openstack-service)
+
 ## Concertim
 
 For docs pertaining to Concertim Environment:
