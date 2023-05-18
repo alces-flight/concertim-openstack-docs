@@ -14,22 +14,22 @@ In either case, the build will download some assets from S3, so you will need to
 
 ## Docker installation
 
-The most recent version of the Concertim UI is `0.1.3`. To install this version as multiple Docker containers follow the instructions at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.3/docker/README.md.
+The most recent version of the Concertim UI is `0.1.4`. To install this version as multiple Docker containers follow the instructions at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.4/concertim-ui/README.md. The instructions detail how to setup access to a private docker registry containing the concertim docker images.
 
-The Docker images can be built on and ran on any machine suitable for running Docker containers. This could be the same machine that runs an OpenStack installation, but it doesn't have to be.
+The Docker images can be ran on any machine suitable for running Docker containers. This could be the same machine that runs an OpenStack installation, but it doesn't have to be.
 
-The Docker container `concertim_ui_proxy_1` binds its HTTP and HTTPS ports to the Docker host's `9080` and `9443` ports respectively on interface `127.0.0.1`.  Details on configuring the defaults can be found at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.2/docker/README.md#configuration.
+The Docker container `concertim-ui_proxy_1` binds its HTTP and HTTPS ports to the Docker host's `80` and `443` ports respectively on interface `0.0.0.0`.  Details on configuring the defaults can be found at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.4/concertim_ui/README.md#configuration.
 
 The HTTP port redirects all traffic to the HTTPS port, as such access to it is optional.
 
-Any users of the Concertim UI will need to be able to access the HTTPS port of the Docker container `concertim_ui_proxy_1` and optionally the HTTP port.  By default bound to port `9443` on the docker host.
+Any users of the Concertim UI will need to be able to access the HTTPS port of the Docker container `concertim-ui_proxy_1` and optionally the HTTP port.  By default bound to port `443` on the docker host.
 
-The Concertim OpenStack service will need to be able to access the HTTPS port of the `concertim_ui_proxy_1` container. By default bound to port `9443` on the docker host.
+The Concertim OpenStack service will need to be able to access the HTTPS port of the `concertim-ui_proxy_1` container. By default bound to port `443` on the docker host.
 
 
 ## VM installation
 
-Alternatively, the Concertim UI can be built on a dedicated VM. Instructions for this can be found at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.3/ansible/README.md.
+Alternatively, the Concertim UI can be built on a dedicated VM. Instructions for this can be found at https://github.com/alces-flight/concertim-ansible-playbook/blob/0.1.4/ansible/README.md.
 
 The VM could be an OpenStack instance running on the OpenStack service that is to be managed, but it doesn't have to be.
 
@@ -40,11 +40,11 @@ The Concertim OpenStack service will need to be able to access port `443` of the
 
 ### Post-installation configuration
 
-Before the Concertim UI is ready to be used, a number of machine templates need to be created. It is expected that these templates will vary from site to site and will match the OpenStack flavours available at that site. An example script of how to create these templates is available at https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.3/docs/api/examples/create-template.sh
+Before the Concertim UI is ready to be used, a number of machine templates need to be created. It is expected that these templates will vary from site to site and will match the OpenStack flavours available at that site. An example script of how to create these templates is available at https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.2/docs/api/examples/create-template.sh
 
-To quickly populate multiple example templates the script https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.3/docs/api/examples/populate-templates.sh can be used.
+To quickly populate multiple example templates the script https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.2/docs/api/examples/populate-templates.sh can be used.
 
-Details on how to run those example scripts can be found at https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.3/docs/api/examples/README.md A brief example session is reproduced below.
+Details on how to run those example scripts can be found at https://github.com/alces-flight/concertim-ct-visualisation-app/blob/0.1.2/docs/api/examples/README.md A brief example session is reproduced below.
 
 Note that if running either of those scripts you will want to check out the entire example directory.
 
@@ -71,7 +71,7 @@ It needs to be able to make HTTP/s requests to the OpenStack installation that i
 
 ## User accounts and projects
 
-Concertim UI `0.1.3` ships with a single admin account by default, namely `admin`, the password is the same as the username.
+Concertim UI `0.1.4` ships with a single admin account by default, namely `admin`, the password is the same as the username.
 
 Each OpenStack project to be managed by Concertim should have a different non-admin Concertim account created and configured for it.  Non-admin accounts can be created from the Concertim UI.  Once the account has been created, its OpenStack project ID can be set via the "Account Details" page in the Concertim UI. Setting a project ID is not available for the admin user.
 
